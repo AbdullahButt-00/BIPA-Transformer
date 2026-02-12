@@ -1,0 +1,57 @@
+ARCHITECTURE WORKFLOW
+
+1. INPUT
+   - Input Image I ∈ R^{H × W × C}
+
+2. OBJECT LOCALIZATION (YOLO)
+   - Detect bounding box around mosquito.
+   - Crop the region for further processing.
+
+3. MICRO-PATCH EMBEDDING
+   - Divide cropped image into micro-patches: p_{i,j} ∈ R^{P × P × C}
+   - Flatten each patch: p_k → R^{P^2 C}
+   - Linear projection:
+       E_k = p'_k W_p + b_p
+   - Add positional embedding:
+       T_k = E_k + P_k
+   - Patch token sequence:
+       T = [t_cls, T_1, ..., T_N]
+
+4. BAM (BIO-INSPIRED PATCH ATTENTION) GENERATOR
+   - Apply feature-specific filters:
+       • Gabor filters (texture)
+       • LoG edges
+       • Contours
+   - Aggregate multi-filter feature maps:
+       M_raw = Aggregate(M_V, M_B, M_A)
+   - Compute patch-level averaged importance:
+       M_k = (1 / |p_k|) * Σ_{x,y ∈ patch_k} M_raw(x,y)
+   - Normalize weights:
+       M̂_B = Softmax(M) or Sigmoid(M)
+
+5. BIPA ATTENTION (BIO-INSPIRED PATCH ATTENTION)
+   - Compute attention matrices:
+       Q_h = T W_Q^h
+       K_h = T W_K^h
+       V_h = T W_V^h
+   - Dot-product attention scores:
+       Score_h = (Q_h K_h^T) / sqrt(d_k)
+   - Add BAM modulation:
+       Score_{h,BIPA} = Score_h + α M̂_B
+   - Softmax:
+       A_h = softmax(Score_{h,BIPA})
+   - Weighted output:
+       Weighted_h = A_h V_h
+   - Multi-head output:
+       MultiHeadOutput = Concat(Weighted_1, ..., Weighted_H) W_O
+
+6. BIPA ENCODER BLOCK
+   - Residual + LayerNorm + Attention:
+       Z1 = BIPA(LayerNorm(T)) + T
+   - Residual + LayerNorm + MLP:
+       Z2 = MLP(LayerNorm(Z1)) + Z1
+
+7. CLASSIFIER
+   - Final classifier MLP:
+       Predicted_Class = MLP(Z2_cls_token)
+

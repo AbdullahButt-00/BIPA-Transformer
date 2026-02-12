@@ -506,7 +506,7 @@ Contributions are welcome! Please:
 
 For questions or issues:
 - Open an issue on GitHub
-- Email: your.email@example.com
+- Email: abdullah03467496@gmail.com
 
 ## 🙏 Acknowledgments
 

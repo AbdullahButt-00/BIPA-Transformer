@@ -20,7 +20,7 @@
 - **(Vector Mosquito Dataset - Medium VT) Dataset02**:  
   https://drive.google.com/drive/folders/1awG6MYBw5pN-c5W-K_VrTOgHqY2XUSBo  
 
-- **(Vector-borne Disease Dataset) Dataset03**:  
+- **(Vector-borne Disease Dataset + Advanced Vision Transformer Mosquito Dataset) Dataset03**:  
   https://drive.google.com/drive/folders/1LTMuvXWiSp2GTMph-SGdF4zmZZmLJMuC  
 
 - **(Combined Vector Mosquito Dataset) Dataset04**:  

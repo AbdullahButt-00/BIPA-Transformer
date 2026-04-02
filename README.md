@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **BIPA** (Biologically-Inspired Patch Attention) is a novel Vision Transformer architecture designed for fine-grained mosquito species classification. The model introduces an end-to-end learning approach that discovers species-discriminative biological features without requiring manual segmentation annotations.
-
+**RESULTS**: https://drive.google.com/drive/folders/1DLLmhnNx58DRYixcLihTd-cnhmvMPUJ7?usp=sharing
 ## 📋 Table of Contents
 
 - [Overview](#overview)

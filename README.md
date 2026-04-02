@@ -5,7 +5,31 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **BIPA** (Biologically-Inspired Patch Attention) is a novel Vision Transformer architecture designed for fine-grained mosquito species classification. The model introduces an end-to-end learning approach that discovers species-discriminative biological features without requiring manual segmentation annotations.
-**RESULTS**: https://drive.google.com/drive/folders/1DLLmhnNx58DRYixcLihTd-cnhmvMPUJ7?usp=sharing
+
+## 📊 Results
+
+- **BIPA Results & Visualizations**:  
+  https://drive.google.com/drive/folders/1DLLmhnNx58DRYixcLihTd-cnhmvMPUJ7?usp=sharing
+
+
+## 📊 Datasets
+
+- **(Small VT Mosquito Dataset) Dataset01**:  
+  https://drive.google.com/drive/folders/10R1lpjvGX0Go5jG47j7C87XCRonO1d0x  
+
+- **(Vector Mosquito Dataset - Medium VT) Dataset02**:  
+  https://drive.google.com/drive/folders/1awG6MYBw5pN-c5W-K_VrTOgHqY2XUSBo  
+
+- **(Vector-borne Disease Dataset) Dataset03**:  
+  https://drive.google.com/drive/folders/1LTMuvXWiSp2GTMph-SGdF4zmZZmLJMuC  
+
+- **(Combined Vector Mosquito Dataset) Dataset04**:  
+  https://drive.google.com/drive/folders/1LTMuvXWiSp2GTMph-SGdF4zmZZmLJMuC  
+
+- **(Malaria Cell Images Dataset) Dataset05**:  
+  https://www.kaggle.com/datasets/iarunava/cell-images-for-detecting-malaria
+
+  
 ## 📋 Table of Contents
 
 - [Overview](#overview)
